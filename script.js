@@ -34,7 +34,8 @@ function wishMe(){
 wishMe()
 
 // Refresh the page when this script is executed
-// var refresher = new PageRefresher();
+
+var wishMe = new wishMe();
 
 
 window.addEventListener('load', () =>{

@@ -7,11 +7,12 @@ function speak(text){
   text_speak.rate=1
   text_speak.pitch=1
   text_speak.volume=1
-  text_speak.lang="hi-GB"
+  text_speak.lang="hi-GB" 
   window.speechSynthesis.speak(text_speak)
 }
 
 function wishMe(){
+
    let day = new Date()
    let hours = day.getHours()
   if(hours >=0 && hours<12){
@@ -29,9 +30,15 @@ function wishMe(){
     speak("what can you help you")
   }
 }
- 
+
+wishMe()
+
+// Refresh the page when this script is executed
+// var refresher = new PageRefresher();
+
+
 window.addEventListener('load', () =>{
-   wishMe()
+  wishMe()
 })
 
 let speechRecognition= window.SpeechRecognition || window.webkitSpeechRecognition 
@@ -93,26 +100,3 @@ function takeCommand(message){
 }
 
 
-function getGmailName() {
-  // Get the current URL
-  const url = window.location.href;
-
-  // Check if the URL contains "gmail.com"
-  if (url.includes("gmail.com")) {
-    // Extract the username from the URL
-    const usernameMatch = url.match(/https?:\/\/mail\.google\.com\/mail\/u\/([a-zA-Z0-9\-_]+)/);
-    if (usernameMatch) {
-      const username = usernameMatch[1];
-      console.log("Gmail username:", username);
-      // You can use the username for further actions here
-      return username;
-    } else {
-      console.error("Unable to extract Gmail username from URL.");
-    }
-  } else {
-    console.error("Not on a Gmail page.");
-  }
-}
-
-// Call the function to get the Gmail name
-const gmailName = getGmailName();

@@ -28,6 +28,7 @@ function wishMe(){
     speak(" Good Evening Sir")
     speak("I am shifra") 
     speak("what can you help you")
+    console.log("Hello shifra")
   }
 }
 
